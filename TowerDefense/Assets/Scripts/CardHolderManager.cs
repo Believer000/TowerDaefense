@@ -1,6 +1,3 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -11,7 +8,6 @@ public class CardHolderManager : MonoBehaviour
     [SerializeField] private GameObject _card;
     [SerializeField] private Card[] _cardSO;
     private int _cardsAmmount;
-
     [Header("Card Parameters")]
     [SerializeField] private GameObject[] _plantedCards;
     private int _cost;
@@ -33,6 +29,7 @@ public class CardHolderManager : MonoBehaviour
 
         cardManager.CardSO = _cardSO[i];
 
+
         _plantedCards[i] = card;
 
         _icon = _cardSO[i].icon;
@@ -42,4 +39,3 @@ public class CardHolderManager : MonoBehaviour
         card.GetComponentInChildren<TMP_Text>().text = _cost.ToString();
     }
 }
-
